@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CSharpFundamentals
 {
-    class TestProgram02
+    public class TestProgram02
     {
-        static void Test1(string[] args)
+        public void Test02()
         {
             Console.WriteLine("This is the second program to demonstrate the Variables Usage in CSharp");
             Console.WriteLine("Test for Integers Usage");
