@@ -15,6 +15,9 @@ namespace CSharpFundamentals
 
             TestProgram02 testProgram02 = new TestProgram02();
             testProgram02.Test02();
+
+            TestArraysExample example = new TestArraysExample();
+            example.example01();
         }
     }
 }
