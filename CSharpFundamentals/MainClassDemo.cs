@@ -11,13 +11,13 @@ namespace CSharpFundamentals
         public static void Main(string[] args)
         {
             TestProgram01 testProgram01 = new TestProgram01();
-            testProgram01.Test01();
+            testProgram01.FirstExample();
 
             TestProgram02 testProgram02 = new TestProgram02();
-            testProgram02.Test02();
+            testProgram02.TestVariablesType();
 
-            TestArraysExample example = new TestArraysExample();
-            example.example01();
+            TestProgram03 testProgram03 = new TestProgram03();
+            testProgram03.ArraysExample();
         }
     }
 }

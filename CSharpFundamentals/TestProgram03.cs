@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace CSharpFundamentals
 {
-    public class TestArraysExample
+    public class TestProgram03
     {
-        public void example01()
+        public void ArraysExample()
         {
             String[] arr01 = { "One", "Piece", "is", "the", "Best", "Anime", "in", "the", "World" };
             int[] arr02 = { 1, 9, 32, 78, 59 };

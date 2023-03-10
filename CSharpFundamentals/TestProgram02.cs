@@ -8,7 +8,7 @@ namespace CSharpFundamentals
 {
     public class TestProgram02
     {
-        public void Test02()
+        public void TestVariablesType()
         {
             Console.WriteLine("This is the second program to demonstrate the Variables Usage in CSharp");
             Console.WriteLine("Test for Integers Usage");

@@ -6,7 +6,7 @@ namespace CSharpFundamentals
 {
     public class TestProgram01
     {
-        public void Test01()
+        public void FirstExample()
         {
             Console.WriteLine("Hello, World!");
             Console.WriteLine("This is my first time coding in CSharp");
