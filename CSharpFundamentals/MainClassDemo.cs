@@ -18,6 +18,9 @@ namespace CSharpFundamentals
 
             TestProgram03 testProgram03 = new TestProgram03();
             testProgram03.ArraysExample();
+
+            TestProgram04 testProgram04 = new TestProgram04();
+            testProgram04.TestArrayList();
         }
     }
 }
