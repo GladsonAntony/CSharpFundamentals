@@ -21,6 +21,9 @@ namespace CSharpFundamentals
 
             TestProgram04 testProgram04 = new TestProgram04();
             testProgram04.TestArrayList();
+
+            TestProgram05 testProgram05 = new TestProgram05();
+            testProgram05.LinqExample();
         }
     }
 }
