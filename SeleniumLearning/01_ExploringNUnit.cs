@@ -1,6 +1,6 @@
 namespace SeleniumLearning
 {
-    public class UnitTest01
+    public class ExploringNUnitFeaturtes
     {
         [SetUp]
         public void Setup()

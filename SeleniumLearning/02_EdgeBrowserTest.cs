@@ -7,21 +7,21 @@ using WebDriverManager.DriverConfigs.Impl;
 
 namespace SeleniumLearning
 {
-    public class SeleniumTest01
+    public class EdgeBrowserTest
     {
         public IWebDriver driver;
 
         [SetUp]
-        public void SetupBrowser()
+        public void SetupEdgeBrowser()
         {
             new WebDriverManager.DriverManager().SetUpDriver(new EdgeConfig());
-            driver = new EdgeDriver();
-            driver.Manage().Window.Maximize();            
+            driver = new EdgeDriver();                        
         }
 
         [Test]
         public void Test01() 
         {
+            driver.Manage().Window.Maximize();
             driver.Url = "https://www.google.com/";
             string pageTitle = driver.Title.ToString();
             Assert.That (pageTitle, Is.EqualTo("Google"));
