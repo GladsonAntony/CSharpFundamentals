@@ -11,20 +11,20 @@ using WebDriverManager.DriverConfigs.Impl;
 
 namespace SeleniumLearning
 {
-    public class FirefoxBrowserTest
+    public class ChromeBrowserTest
     {
         public IWebDriver driver;
 
         [SetUp]
-        public void SetupFirefoxBrowser()
+        public void SetupChromeBrowser()
         {            
-            driver = new FirefoxDriver();
-            driver.Manage().Window.Maximize();
+            driver = new ChromeDriver();            
         }
 
         [Test]
-        public void TestFirefoxBrowser()
+        public void TestChromeBrowser()
         {
+            driver.Manage().Window.Maximize();
             driver.Url = "https://courses.rahulshettyacademy.com/";
             Thread.Sleep(5000);
             TestContext.Progress.WriteLine(driver.Title);

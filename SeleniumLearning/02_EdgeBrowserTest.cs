@@ -19,7 +19,7 @@ namespace SeleniumLearning
         }
 
         [Test]
-        public void Test01() 
+        public void TestEdgeBrowser() 
         {
             driver.Manage().Window.Maximize();
             driver.Url = "https://www.google.com/";
