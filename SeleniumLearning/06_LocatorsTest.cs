@@ -1,11 +1,5 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Edge;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SeleniumLearning
 {
@@ -20,17 +14,6 @@ namespace SeleniumLearning
             driver.Manage().Window.Maximize();
             driver.Url = "https://www.rahulshettyacademy.com/loginpagePractise/";
             TestContext.Progress.WriteLine(driver.Title);
-        }
-
-        [Test]
-        public void TestLocators01()
-        {
-              
-            IWebElement username1 = driver.FindElement(By.XPath("//input[@id='username']"));
-            username1.SendKeys("Gladson Antony");
-            Thread.Sleep(5000);
-            username1.Clear();
-            Thread.Sleep(5000);
         }
 
         [Test]
