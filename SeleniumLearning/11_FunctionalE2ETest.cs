@@ -31,22 +31,25 @@ namespace SeleniumLearning
             TestContext.WriteLine("Page after Login -> " + driver.Title);
             webDriverWait.Until(ExpectedConditions.ElementIsVisible(By.PartialLinkText("Checkout")));
 
-            String[] expectedProducts = { "iphoneX", "Samsung Note 8" };
+            String[] expectedProducts = { "iphone X", "Samsung Note 8" };
 
             TestContext.WriteLine("Products available in the Page..");
-            IList<IWebElement> productsList = driver.FindElements(By.TagName("app-card"));
+            IList<IWebElement> products = driver.FindElements(By.TagName("app-card"));
 
-            foreach (IWebElement product in productsList) 
+            foreach (IWebElement product in products) 
             {
+                TestContext.WriteLine(product.FindElement(By.CssSelector(".card-title a")).Text);
                 if (expectedProducts.Contains(product.FindElement(By.CssSelector(".card-title a")).Text))
                 {
-                    TestContext.WriteLine("Product found "+product.Text);
+                    product.FindElement(By.CssSelector(".card-footer button")).Click();
                 }
-                //else
-                //{
-                //    TestContext.WriteLine(product.FindElement(By.CssSelector(".card-title a")).Text);
-                //}
             }
+
+            driver.FindElement(By.XPath("//a[@class='nav-link btn btn-primary']")).Click();
+            webDriverWait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//button[normalize-space()='Checkout']")));
+            driver.FindElement(By.XPath("//button[normalize-space()='Checkout']")).Click();
+            webDriverWait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector("input[value='Purchase']")));
+            driver.FindElement(By.CssSelector("input[value='Purchase']")).Click();            
         }
 
         [TearDown]
